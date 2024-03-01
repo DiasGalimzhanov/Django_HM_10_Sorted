@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for value in values %}
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <h5>Заголовок: {{value.title}}</h5>
+            <p>Статус: {{value.status}}</p>
+            <p>Дедлайн: {{value.deadline}}</p>
+        </div>
+      </div>
+    </div>
+</div>
+{%  endfor %}
+{% endblock %}

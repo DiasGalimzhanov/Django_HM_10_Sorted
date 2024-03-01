@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for exlude in exludes %}
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <p>Имя: {{exlude.name}}</p>
+            <p>Пол: {{exlude.gender}}</p>
+            <p>Возраст: {{exlude.age}}</p>
+    
+        </div>
+      </div>
+    </div>
+</div>
+{%  endfor %}
+{% endblock %}

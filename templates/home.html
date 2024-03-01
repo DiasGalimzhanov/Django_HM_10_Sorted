@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for user in users %}
+    <table class="table table-striped">
+        <a href="{% url 'todos' user.id %}">{{user.name}}</a>
+    </table>
+{% endfor %}
+
+{% endblock %}
